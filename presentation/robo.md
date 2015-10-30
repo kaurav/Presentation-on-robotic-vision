@@ -1,29 +1,22 @@
 <link rel="stylesheet" href="css/theme/mandeep.css" id="theme">
 <section data-background="images/wel.jpg">
->##welcome
->to
->#<span style="color:red;">Robotic</span> vision
+>##welcome <br/>to
+>#*Robotic* vision
 
 ---
 
-<section data-background="images/digi.jpg">
 >###*Digital* Images 
 
->Digital image is a numeric representation of a two-dimensional 
-image. Depending on whether the image resolution is fixed, it
- may be of vector or raster type. By itself, the term 
-*digital image* usually refers to raster images or
-bitmapped images.
+Digital image is a numeric representation of a two-dimensional image. Depending on whether the image resolution is fixed, it may be of vector or raster type. By itself, the term <span style="color:red;">digital image</span> usually refers to raster images or bitmapped images.
 
 ---
 
-<section data-background="images/url.jpeg">
 >###*Image* formats
 
 Type | File extension | Description | 
 -----|----------------|------------
 JPEG |.jpg .jpeg      |Joint photographic Expert Group
-TIFF |.tif .tiff      |Tagged Image File Fprmat
+TIFF |.tif .tiff      |Tagged Image File Format
 GIF  |.gif            |Graphic Interchange Format
 PNG  |.png            |Portable Network Graphics
 BMP  |.bmp            |BitMap Format
@@ -31,6 +24,7 @@ PGM  |.pgm            |Portable GrayMap format
 
 ---
 
+<section data-background="images/gr1.png">
 >###Image *file formats*
 
 ![image](images/9.png)
@@ -94,17 +88,17 @@ PGM  |.pgm            |Portable GrayMap format
 
 <section data-background="images/getting.jpg">
 
->###getting *images* into computer                 
+>###getting *images* into Programming environment
 
 ```
->import cv2            
->img=cv2.imread('gne.jpg')  
->cv2.imshow('image',img)                        
->cv2.waitKey(0)             
+>import cv2
+>img=cv2.imread('gne.jpg') 
+>cv2.imshow('image',img) 
+>cv2.waitKey(0) 
 >cv2.destroyAllWindows()
 
 ```
-<div class="fragment">![image1](images/Bhai_Ghanaiya_ji_screenshot_30.07.2015.png)</div>                  
+<div class="fragment">![image1](images/Bhai_Ghanaiya_ji_screenshot_30.07.2015.png)</div> 
 
 
 ---
@@ -112,7 +106,7 @@ PGM  |.pgm            |Portable GrayMap format
 
 >###Unsigned 8-bit integer *(uint8)*
 
-![image](images/6.png)
+ ![image](images/6.png)
 
 * Smallest value is 00000000<sub>2</sub> or 0<sub>10</sub>
 * Largest value is 11111111<sub>2</sub> or 255<sub>10</sub>
@@ -144,7 +138,8 @@ PGM  |.pgm            |Portable GrayMap format
 ```
 >>format long
 >>90.1
-ans = 90.099999999999994 
+reveal
+ons = 90.099999999999994 
 
 ```
 
@@ -170,19 +165,10 @@ ans = 90.099999999999994
 ```
 import cv2
 import numpy as np
-cap = cv2.VideoCapture(0)
-while(1):
-	#reading image of video in frame
-	q,frame = cap.read()
-	getting binary image
-	binary=get.getcolor(frame,'Red')
-	frame,r=get.getshape(binary,frame,'circle')
-	#displaying image for ms
-	cv2.imshow('frame',frame)
-	k = cv2.waitKey(2)
-	#checking condition if esc is press exit 
-	if k == 27:
-		break
+capture=cv2,VideoCapture(0)
+ret, frame = capture.read()
+cv2.imshow('captured image',frame)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ```
@@ -201,7 +187,7 @@ cv2.destroyAllWindows()
 
 ---
 
->###getting an image from *from a movie file
+>###getting an image from *from a movie file*
 
 * Consider the container format, as well as the format of the movie data itself
 * An MPEG-4 movie is correctly:
@@ -218,7 +204,7 @@ cv2.destroyAllWindows()
 >>> import numpy as np
 >>> im= np.zeros((512,512,1))
 >>> cv2.line(im,(0,0),(511,511),(255,0,0),5)
->>> cv2.imshow('hdfh',im)
+>>> cv2.imshow('image',im)
 >>> cv2.waitKey(0)
 048
 >>> cv2.destroyAllWindows()
